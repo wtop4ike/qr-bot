@@ -4,11 +4,6 @@ from PIL import Image, ImageEnhance, ImageFilter
 from utils.generator import generate_qr
 from utils.reader import read_qr
 
-
-# ==========================================
-# 1. POSITIVE TESTS
-# ==========================================
-
 @pytest.mark.asyncio
 async def test_full_cycle_simple_text():
     data = "1234567890005looool"
@@ -31,10 +26,6 @@ async def test_long_payload():
     result = await read_qr(qr_bytes)
     assert result == data
 
-# ==========================================
-# 2. NEGATIVE TESTS
-# ==========================================
-
 @pytest.mark.asyncio
 async def test_corrupted_bytes():
     bad_bytes = b"this_is_not_a_photo_at_all_12345"
@@ -49,11 +40,6 @@ async def test_image_without_qr():
     img.save(buffer, format="PNG")
     result = await read_qr(buffer.getvalue())
     assert result is None
-
-
-# ==========================================
-# 3. ROBUSTNESS TESTS
-# ==========================================
 
 @pytest.mark.asyncio
 @pytest.mark.parametrize("angle", [90, 180, 270, 45])
