@@ -1,0 +1,3 @@
+help: Send text to create a QR code, or a photo of a QR code to read it.
+not_found: No QR code found.
+error: Could not process your request.
