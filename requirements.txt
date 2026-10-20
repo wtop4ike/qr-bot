@@ -3,3 +3,4 @@ qrcode>=8.2
 requests>=2.34.2
 zxing-cpp>=3.1.1
 PyYAML>=6.0
+aiogram

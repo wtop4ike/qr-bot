@@ -1,3 +1,7 @@
-help: Send text to create a QR code, or a photo of a QR code to read it.
-not_found: No QR code found.
-error: Could not process your request.
+start: Send text or a link to create a QR code. Send a photo or image file to read a QR code.
+too_large: Please send an image up to 10 MB.
+download_error: Could not download the file. Please send it again.
+not_found: No QR code found. Try a clearer image, preferably as a file.
+empty: A QR code was found, but it contains no text.
+text_too_large: The text is too large for a QR code. Try shortening it.
+unsupported: Send text, a photo, or an image file.
